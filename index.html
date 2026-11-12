@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!-- Root element: Hebrew language, right-to-left layout -->
+<html lang="he" dir="rtl">
+<head>
+  <!-- UTF-8 encoding so Hebrew characters display correctly -->
+  <meta charset="UTF-8">
+  <!-- Scale the page to the device width (mobile support) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Text shown in the browser tab -->
+  <title>ממיר תאריך לועזי לעברי</title>
+  <!-- Link to the stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Main card that holds the whole UI -->
+  <div class="card">
+    <!-- Page heading and short instruction -->
+    <h1>ממיר תאריך לועזי לעברי</h1>
+    <p class="subtitle">בחרו תאריך לועזי ולחצו "המר"</p>
+
+    <!-- Gregorian date picker -->
+    <label for="dateInput">תאריך לועזי:</label>
+    <input type="date" id="dateInput">
+
+    <!-- "After sunset" checkbox (sends gs=on to the API) -->
+    <label class="checkbox">
+      <input type="checkbox" id="afterSunset">
+      אחרי השקיעה
+    </label>
+
+    <!-- Button that triggers the conversion -->
+    <button id="convertBtn">המר</button>
+
+    <!-- Error message box (hidden by default) -->
+    <div id="error" class="error hidden"></div>
+
+    <!-- Result box (hidden until a response arrives) -->
+    <div id="result" class="result hidden">
+      <!-- Full Hebrew date string -->
+      <div id="hebrewDate" class="hebrew-date"></div>
+
+      <!-- Day / month / year shown separately -->
+      <div class="parts">
+        <div><span>יום</span><strong id="partDay"></strong></div>
+        <div><span>חודש</span><strong id="partMonth"></strong></div>
+        <div><span>שנה</span><strong id="partYear"></strong></div>
+      </div>
+
+      <!-- List of events for the selected day -->
+      <h3>אירועים ביום זה:</h3>
+      <ul id="events"></ul>
+    </div>
+
+    <!-- Data source credit -->
+    <p class="credit">הנתונים מתקבלים מ-Hebcal REST API</p>
+  </div>
+
+  <!-- Load the script last, after all elements exist -->
+  <script src="script.js"></script>
+</body>
+</html>

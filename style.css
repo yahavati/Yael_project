@@ -1,0 +1,152 @@
+/* Page: gradient background, card centered vertically and horizontally */
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+/* White card with rounded corners and shadow */
+.card {
+  background: #fff;
+  width: 100%;
+  max-width: 420px;
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Main heading */
+h1 {
+  margin: 0 0 6px;
+  font-size: 1.6rem;
+  color: #1e3c72;
+  text-align: center;
+}
+
+/* Gray instruction line under the heading */
+.subtitle {
+  margin: 0 0 20px;
+  text-align: center;
+  color: #666;
+}
+
+/* Field labels on their own line */
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+/* Full-width date input */
+input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  margin-bottom: 12px;
+}
+
+/* Checkbox and its text on one row */
+.checkbox {
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+/* Blue full-width button */
+button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.1rem;
+  color: #fff;
+  background: #2a5298;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Darker blue on hover */
+button:hover { background: #1e3c72; }
+
+/* Loading state: gray, not clickable */
+button:disabled {
+  background: #999;
+  cursor: wait;
+}
+
+/* Light blue result box */
+.result {
+  margin-top: 20px;
+  padding: 16px;
+  background: #f0f5ff;
+  border-radius: 10px;
+}
+
+/* Large Hebrew date text */
+.hebrew-date {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  color: #1e3c72;
+  margin-bottom: 14px;
+}
+
+/* Day / month / year side by side */
+.parts {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+/* Small gray caption above each part */
+.parts span {
+  display: block;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* Value of each part */
+.parts strong { font-size: 1.2rem; }
+
+/* "Events" sub-heading */
+h3 {
+  margin: 16px 0 6px;
+  font-size: 1rem;
+}
+
+/* Events list indentation (right side, RTL) */
+ul {
+  margin: 0;
+  padding-right: 20px;
+}
+
+/* Red error box */
+.error {
+  margin-top: 16px;
+  padding: 12px;
+  background: #ffe5e5;
+  color: #b00020;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Utility class: hide an element */
+.hidden { display: none; }
+
+/* Small credit line at the bottom */
+.credit {
+  margin: 20px 0 0;
+  font-size: 0.75rem;
+  color: #999;
+  text-align: center;
+}
